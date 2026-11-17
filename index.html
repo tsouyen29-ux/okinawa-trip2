@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>沖繩那霸 3 天 2 夜小旅行</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFFCF6;--ink:#3E3A39;--pink:#F2A497;--yel:#F6D27A;--blue:#A8D3E6;--grn:#B9DAA5;--r:24px;color-scheme:light}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--ink);font-family:"Huninn","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.6;font-size:16px;padding-bottom:env(safe-area-inset-bottom,0px)}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:var(--bg);border-bottom:3px solid var(--ink);padding:env(safe-area-inset-top,0px) 10px 0;display:flex;align-items:center;justify-content:space-between;gap:6px}
+nav b{font-size:15px;white-space:nowrap;padding:10px 0}
+nav div{display:flex;gap:6px;padding:8px 0}
+nav a{color:var(--ink);text-decoration:none;font-size:14px;border:3px solid var(--ink);border-radius:99px;padding:1px 11px;background:var(--yel)}
+nav a:nth-child(2){background:var(--blue)}nav a:nth-child(3){background:var(--grn)}nav a:nth-child(4){background:var(--pink)}
+main{max-width:560px;margin:0 auto;padding:calc(64px + env(safe-area-inset-top,0px)) 16px 40px}
+section{margin-top:28px}
+h2{font-size:22px;margin-bottom:12px;display:inline-block;background:var(--yel);border:3px solid var(--ink);border-radius:99px;padding:0 16px}
+.card{background:var(--bg);border:3px solid var(--ink);border-radius:var(--r);padding:16px;box-shadow:0 5px 0 var(--ink)}
+.hero{text-align:center;padding:12px}
+.hero svg{width:100%;height:auto;display:block;border:3px solid var(--ink);border-radius:18px;background:#E3F1F8}
+.hero h1{font-size:28px;margin:14px 0 2px;line-height:1.3}
+.hero p{font-size:14px}
+.cd{margin-top:12px;display:inline-flex;align-items:baseline;gap:6px;background:var(--pink);border:3px solid var(--ink);border-radius:99px;padding:4px 20px}
+.cd strong{font-size:34px;line-height:1.1}
+.fl{display:grid;gap:14px}
+.fl .card{display:flex;flex-direction:column;gap:6px}
+.fl .row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.fl .code{font-size:26px}
+.fl .rt{display:flex;align-items:center;gap:8px;font-size:20px}
+.fl .rt i{flex:1;border-top:3px dashed var(--ink);min-width:30px}
+.pill{display:inline-block;border:3px solid var(--ink);border-radius:99px;padding:0 10px;font-size:13px;line-height:1.5}
+.note{font-size:13px;opacity:.8}
+.tabs{display:flex;gap:8px;margin-bottom:14px}
+.tabs button{flex:1;font:inherit;color:var(--ink);background:var(--bg);border:3px solid var(--ink);border-radius:18px;padding:6px 4px;line-height:1.25;cursor:pointer}
+.tabs button small{display:block;font-size:12px}
+.tabs button[aria-selected=true]{background:var(--pink);box-shadow:0 4px 0 var(--ink);transform:translateY(-2px)}
+.pop{animation:pop .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pop{0%{transform:scale(.9) translateY(14px);opacity:0}100%{transform:none;opacity:1}}
+.tl{list-style:none;padding:0;position:relative;margin-left:8px}
+.tl:before{content:"";position:absolute;left:11px;top:8px;bottom:8px;border-left:3px dashed var(--ink)}
+.tl li{position:relative;padding-left:40px;margin-bottom:14px}
+.tl li:before{content:"";position:absolute;left:0;top:10px;width:24px;height:24px;border:3px solid var(--ink);border-radius:50%;background:var(--blue)}
+.tl li.must:before{background:var(--pink)}
+.tl .time{font-size:13px;opacity:.75}
+.tl h3{font-size:18px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tl p{font-size:14px}
+.tag{font-size:12px;border:2px solid var(--ink);border-radius:99px;padding:0 9px;display:inline-block;margin:2px 4px 0 0;line-height:1.55}
+.fly{background:var(--pink)}.rail{background:var(--blue)}.walk{background:var(--grn)}.lime{background:var(--yel)}.bus{background:var(--bg)}
+.must-t{background:var(--pink);border:3px solid var(--ink);border-radius:99px;font-size:12px;padding:0 9px;transform:rotate(-4deg);display:inline-block}
+.sub{font-size:17px;margin:20px 0 8px;display:flex;align-items:center;gap:8px}
+.chk{list-style:none;padding:0;display:grid;gap:8px}
+.chk label{display:flex;gap:10px;align-items:center;cursor:pointer}
+.chk input{appearance:none;-webkit-appearance:none;flex:none;width:26px;height:26px;border:3px solid var(--ink);border-radius:9px;background:var(--bg);display:grid;place-content:center;cursor:pointer}
+.chk input:checked{background:var(--grn)}
+.chk input:checked:after{content:"";width:6px;height:12px;border:solid var(--ink);border-width:0 3px 3px 0;transform:rotate(45deg) translate(-1px,-1px);animation:pop .35s}
+.chk input:checked+span{text-decoration:line-through;opacity:.55}
+.hotel label{display:block;font-size:13px;margin-top:10px}
+.hotel input{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:3px solid var(--ink);border-radius:14px;padding:6px 12px}
+.grid2{display:grid;gap:16px}
+.bar{height:14px;border:3px solid var(--ink);border-radius:99px;background:var(--bg);overflow:hidden;margin-bottom:10px}
+.bar i{display:block;height:100%;width:0;background:var(--grn);transition:width .4s}
+footer{text-align:center;font-size:13px;margin-top:30px}
+.plane{animation:fly 7s ease-in-out infinite}
+.cloud{animation:drift 14s ease-in-out infinite alternate}
+.cloud2{animation-duration:19s;animation-direction:alternate-reverse}
+.wave{animation:wave 3s ease-in-out infinite alternate}
+.sun{animation:spin 24s linear infinite;transform-origin:292px 52px}
+.train{animation:train 9s linear infinite}
+@keyframes fly{0%,100%{transform:translate(0,0) rotate(-3deg)}50%{transform:translate(14px,-8px) rotate(2deg)}}
+@keyframes drift{to{transform:translateX(26px)}}
+@keyframes wave{to{transform:translateX(-18px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes train{0%{transform:translateX(30px)}100%{transform:translateX(-170px)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<nav><b>🌺 沖繩小旅行</b><div><a href="#top">首頁</a><a href="#flight">航班</a><a href="#plan">行程</a><a href="#prep">清單</a></div></nav>
+<main id="top">
+
+<div class="card hero">
+<svg viewBox="0 0 360 210" role="img" aria-label="沖繩插畫：波上宮、單軌電車、飛機與海浪" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<g class="sun"><circle cx="292" cy="52" r="24" fill="#F6D27A"/><path d="M292 14v8M292 82v8M254 52h8M322 52h8M265 25l6 6M313 73l6 6M319 25l-6 6M271 73l-6 6" fill="none"/></g>
+<g class="cloud" fill="#FFFCF6"><path d="M30 62q0-16 16-16 8-12 24-6 14 0 14 14 10 2 8 12H28q-8-2 2-4z"/></g>
+<g class="cloud cloud2" fill="#FFFCF6"><path d="M190 36q0-10 11-10 6-8 17-4 10 0 10 10 7 2 5 8h-44q-5-1 1-4z"/></g>
+<g class="plane"><path d="M120 76l54-8c10-1 18 2 16 6s-10 7-20 8l-50 6z" fill="#F2A497"/><path d="M146 72l-14-22 12-2 20 20zM146 84l-12 20 12 2 18-22z" fill="#FFFCF6"/><circle cx="178" cy="75" r="2" fill="#3E3A39" stroke="none"/></g>
+<path d="M0 158q8-52 68-54l44 4q22 20 36 50z" fill="#B9DAA5"/>
+<g><rect x="62" y="84" width="42" height="20" fill="#F2A497"/><path d="M54 86l29-24 29 24z" fill="#F6D27A"/><rect x="76" y="92" width="14" height="12" fill="#FFFCF6"/></g>
+<rect x="0" y="150" width="400" height="70" fill="#A8D3E6"/>
+<g class="wave" fill="none"><path d="M10 168q10-9 20 0t20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0" /><path d="M40 190q10-9 20 0t20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0" /></g>
+<g><path d="M175 132h185" fill="none"/><path d="M200 132v18M262 132v18M324 132v18" fill="none"/></g>
+<g class="train"><g transform="translate(250 0)"><rect x="0" y="106" width="52" height="24" rx="8" fill="#F2A497"/><rect x="56" y="106" width="52" height="24" rx="8" fill="#F6D27A"/><path d="M8 114h8M22 114h8M36 114h8M64 114h8M78 114h8M92 114h8" fill="none"/></g></g>
+<g><path d="M330 150q-4-26 4-44" fill="none"/><path d="M334 108q-18-8-28 6M334 108q16-10 26 4M334 108q-6-16-22-16M334 108q8-16 24-14" fill="none" stroke-width="4" stroke="#3E3A39"/><path d="M334 108q-18-8-28 6q14-2 28-6zM334 108q16-10 26 4q-12-4-26-4z" fill="#B9DAA5"/></g>
+</svg>
+<h1>沖繩那霸<br>三天兩夜小旅行</h1>
+<p>2026／12／24 – 12／26</p>
+<div class="cd" id="cd"></div>
+</div>
+
+<section id="flight">
+<h2>✈ 航班</h2>
+<div class="fl">
+<div class="card"><span class="pill" style="background:var(--pink)">去程　12/24（四）</span>
+<div class="row"><span class="code">MM922</span><span class="note">樂桃航空</span></div>
+<div class="rt"><b>09:45 台北</b><i></i>✈<i></i><b>12:25 那霸</b></div>
+<span class="note">時間為當地時間，航廈請以電子機票為準</span></div>
+<div class="card"><span class="pill" style="background:var(--blue)">回程　12/26（六）</span>
+<div class="row"><span class="code">BR185</span><span class="note">長榮航空</span></div>
+<div class="rt"><b>20:10 那霸</b><i></i>✈<i></i><b>20:55 台北</b></div>
+<span class="note">時間為當地時間，航廈請以電子機票為準</span></div>
+</div>
+</section>
+
+<section id="plan">
+<h2>🗺 每日行程</h2>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div id="panel"></div>
+</section>
+
+<section>
+<h2>🏨 住宿資訊</h2>
+<div class="card hotel">
+<p><b>那霸國際通大和 ROYNET 飯店</b></p>
+<p class="note">📍 牧志站旁邊（單軌電車沿線）</p>
+<p style="margin-top:8px"><span class="tag lime">AIRPORTER</span>行李由 AIRPORTER 當日寄送：去程從機場寄到飯店，回程從飯店寄到機場</p>
+<label>飯店名稱<input data-k="h1" value="那霸國際通大和ROYNET飯店" placeholder="填入飯店名稱"></label>
+<label>地址／電話<input data-k="h2" value="2 Chome-1-1 Asato, Naha, Okinawa 902-0067" placeholder="填入地址或電話"></label>
+<label>訂房編號<input data-k="h3" placeholder="填入訂房編號"></label>
+<label>入住／退房<input data-k="h4" placeholder="例：12/24 入住、12/26 退房"></label>
+<p class="note" style="margin-top:10px">填寫的內容只會存在這支手機的瀏覽器裡。</p>
+</div>
+</section>
+
+<section id="prep">
+<h2>📝 出發前清單</h2>
+<div class="card"><div class="bar"><i id="b-pre"></i></div><ul class="chk" id="pre"></ul></div>
+</section>
+
+<section>
+<h2>🧳 行李清單</h2>
+<div class="card"><div class="bar"><i id="b-bag"></i></div><ul class="chk" id="bag"></ul></div>
+</section>
+
+<footer>🌺 玩得開心，平安回家 🌺</footer>
+</main>
+
+<script>
+var D=[
+{d:"12/24",w:"四",t:"出發日・購物與燒肉",items:[
+{t:"12:25",n:"搭 MM922 抵達那霸",p:"09:45 起飛。入境後把大行李交給 AIRPORTER 寄到飯店，輕裝出發。",tags:[["飛機","fly"],["單軌","rail"]]},
+{t:"午後",n:"UNIQLO ＆ SUPER DEPO 天久",p:"先逛服飾與生活雜貨。",tags:[["單軌","rail"],["步行","walk"]]},
+{t:"下午",n:"小間 思夢樂",p:"古島站附近，順路逛逛。",tags:[["單軌","rail"],["步行","walk"]]},
+{t:"傍晚",n:"飯店（牧志站旁）入住休息",p:"確認 AIRPORTER 行李已送達，辦理入住，稍作休息。",tags:[["單軌","rail"]]},
+{t:"晚餐",n:"BUCHI 燒肉",p:"第一晚的大餐。",must:1,tags:[["步行","walk"]]},
+{t:"晚上",n:"國際通散步",p:"牧志站周邊，逛街與伴手禮。",must:1,tags:[["單軌","rail"],["步行","walk"]]}],
+todo:["帶護照辦理退稅","BUCHI 燒肉確認訂位","飯店入住後拍照存證","抵達機場先到 AIRPORTER 櫃檯寄行李"]},
+{d:"12/25",w:"五",t:"海邊神社・漁市場・商場",items:[
+{t:"上午",n:"波上宮",p:"建在海邊岩壁上的神社，沖繩第一名社。",must:1,tags:[["Lime","lime"]]},
+{t:"中午",n:"泊港漁市場",p:"吃海鮮、逛市場。",must:1,tags:[["Lime","lime"]]},
+{t:"下午",n:"PARCO CITY",p:"浦添的大型購物中心。",tags:[["公車／計程車","bus"]]},
+{t:"傍晚",n:"永旺夢樂城 來客夢",p:"逛超市與伴手禮，吃完晚餐再回飯店。",tags:[["公車／計程車","bus"]]}],
+todo:["Lime App 先註冊並綁好信用卡","穿好走的鞋","手機充飽電、帶行動電源"]},
+{d:"12/26",w:"六",t:"Outlet・iias・回家",items:[
+{t:"早上",n:"飯店退房",p:"退房前把行李交給 AIRPORTER 寄到機場，護照與貴重物品隨身帶。",tags:[["步行","walk"]]},
+{t:"上午",n:"Outlet 購物",p:"沖繩豐崎，iias 旁邊。",must:1,tags:[["公車／計程車","bus"]]},
+{t:"中午",n:"iias 沖繩豐崎",p:"最後採買與午餐。",tags:[["步行","walk"]]},
+{t:"傍晚",n:"前往機場，搭 BR185 回台北",p:"20:10 起飛，建議 2 小時前抵達機場辦理登機與退稅。",tags:[["單軌","rail"],["飛機","fly"]]}],
+todo:["日幣花完或留作紀念","伴手禮裝箱，易碎品放隨身","確認登機證與護照","退房前將行李交給 AIRPORTER 寄到機場"]}];
+var PRE=["護照（效期 6 個月以上）","Visit Japan Web 填寫並截圖 QR code","電子機票／登機證截圖","訂房確認信截圖","日幣現金＋信用卡","eSIM／網卡／漫遊方案","手機與行動電源充飽","查詢 Peach 託運與手提行李限額","下載 Google 地圖離線地圖","退稅所需資料（護照）","AIRPORTER 預約確認信截圖"];
+var BAG=["護照＋錢包","手機＋充電線＋行動電源","外套（12 月偏涼）","洋蔥式穿搭衣物","好走的鞋","盥洗用品","個人藥品","雨具","折疊購物袋","口罩／保濕用品","耳機","伴手禮空間（備空行李）"];
+function ld(k){try{return JSON.parse(localStorage.getItem(k))||{}}catch(e){return{}}}
+function sv(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function list(el,bar,key,arr){
+ var s=ld(key),u=document.getElementById(el);u.innerHTML="";
+ function up(){var c=0;for(var i=0;i<arr.length;i++)if(s[i])c++;if(bar)document.getElementById(bar).style.width=(c/arr.length*100)+"%"}
+ arr.forEach(function(t,i){var li=document.createElement("li"),lb=document.createElement("label"),cb=document.createElement("input"),sp=document.createElement("span");
+  cb.type="checkbox";cb.checked=!!s[i];sp.textContent=t;
+  cb.onchange=function(){s[i]=cb.checked;sv(key,s);up()};
+  lb.appendChild(cb);lb.appendChild(sp);li.appendChild(lb);u.appendChild(li)});
+ up();
+}
+var cur=0;
+function tabs(){var t=document.getElementById("tabs");t.innerHTML="";
+ D.forEach(function(x,i){var b=document.createElement("button");b.setAttribute("role","tab");b.setAttribute("aria-selected",i===cur);
+  b.innerHTML="<b>Day "+(i+1)+"</b><small>"+x.d+"（"+x.w+"）</small>";
+  b.onclick=function(){if(cur===i)return;cur=i;tabs();panel(true)};t.appendChild(b)})}
+function panel(anim){var x=D[cur],p=document.getElementById("panel"),h='<div class="card'+(anim?' pop':'')+'"><h3 style="font-size:20px;margin-bottom:14px">'+x.t+'</h3><ol class="tl">';
+ x.items.forEach(function(it){h+='<li'+(it.must?' class="must"':'')+'><div class="time">'+it.t+'</div><h3>'+it.n+(it.must?' <span class="must-t">必去</span>':'')+'</h3><p>'+it.p+'</p><div>'+it.tags.map(function(g){return'<span class="tag '+g[1]+'">'+g[0]+'</span>'}).join('')+'</div></li>'});
+ h+='</ol><h4 class="sub">✅ 今日待辦</h4><ul class="chk" id="todo"></ul></div>';
+ p.innerHTML=h;list("todo",null,"todo"+cur,x.todo)}
+tabs();panel(false);list("pre","b-pre","pre",PRE);list("bag","b-bag","bag",BAG);
+document.querySelectorAll(".hotel input").forEach(function(i){var s=ld("hotel");i.value=s[i.dataset.k]||i.getAttribute("value")||"";i.oninput=function(){var o=ld("hotel");o[i.dataset.k]=i.value;sv("hotel",o)}});
+(function(){var e=document.getElementById("cd"),n=new Date(),a=new Date(n.getFullYear(),n.getMonth(),n.getDate()),g=new Date(2026,11,24),end=new Date(2026,11,26),d=Math.round((g-a)/864e5);
+ if(d>0)e.innerHTML="距離出發還有 <strong>"+d+"</strong> 天";
+ else if(a<=end)e.innerHTML="<strong style='font-size:22px'>旅程進行中！</strong>";
+ else e.innerHTML="<strong style='font-size:22px'>旅程結束，滿滿回憶</strong>"})();
+</script>
+</body>
+</html>
